@@ -17,11 +17,10 @@ jobs:
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
-        python-version: "3.1"
+        python-version: "3.10"
     - name: Install dependencies
       run:  pip install -r src/requirements.txt
-  
+
     - name: Test with pytest
-      run: |
       working-directory: src
-        pytest src/test.py
+      run:  pytest src/test.py
